@@ -384,8 +384,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="mb-2">Sharing Moments of Incredible Journey @ Cars2day </h2>
             <small class="mb-5 d-block">#Cars2dayJourneyforever</small>
         </div>
-        
-        <div class="instaslide">
+        <div class='sk-ww-instagram-hashtag-feed' data-embed-id='82997'></div><script src='https://widgets.sociablekit.com/instagram-hashtag-feed/widget.js' async defer></script>
+        <!-- <div class="instaslide">
             <div class="instaslideinr">
                 <a href="#" class="d-block">
                     <img src="<?=base_url()?>assets/images/insta1.jpg" alt="" class="w-100">
@@ -505,9 +505,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </a>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>      
+
+<style>
+/*.sk_branding{
+    display: none !important;
+}*/
+ body .sk_branding{ display : none !important; } body .sk_branding a{ display : none !important; }
+</style>
+
       
  <section class="seltradsec imgeffect">
     <div class="seltradsecbg">
