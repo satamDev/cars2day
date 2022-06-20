@@ -1,0 +1,220 @@
+
+
+
+/* New CSS */
+
+
+ .comparetitle {
+    background-color:#2a343d;
+    line-height: 1.3;
+}
+.compare-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 17px;
+}
+.compare-header a {
+    color: #2a2a2a;
+}
+
+.comparetitle big {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+.cmlogo img {
+    width: 100px;
+}
+
+.comparehdr {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 99;
+    top: 0;
+}
+.comaredtlssec {
+    margin-top: 130px;
+}
+
+.comphotobtn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 14px 90px;
+    margin: 16px 0;
+    line-height: 16px;
+    border: 2px solid #e74141;
+    border-radius: 5px;
+    color: #e74141;
+    background-color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 400ms;
+}
+.comphotobtn:hover {
+    background-color: #e74141;
+    color: #fff;
+}
+.comphotobtn:hover svg {
+    fill: #fff;
+}
+.comphotobtn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    fill: #e74141;
+    transition: all 400ms;
+}
+.btntb {
+    background: none;
+    padding: 10px 10px;
+    color: #333;
+    border: 0;
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: #fff solid 2px;
+    cursor: pointer;
+}
+.section-title {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: .125px;
+}
+.invert-bg .location-card:nth-child(odd) {
+    background-color: #fafafa;
+}
+.data-row--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 32px);
+    max-width: 95%;
+    margin: 0 auto;
+}
+.data-row--details {
+    flex: 1;
+    text-align: center;
+    color: #2a343d;
+}
+.data-row--label {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 0 8px;
+    color: #053361;
+    box-sizing: border-box;
+}
+.data-row--details:last-child {
+    text-align: center;
+}
+.invert-bg .location-cardw:nth-child(2n) {
+    background-color: #fff;
+}
+.location-card {
+    border-top: 1px solid #ddd;
+}
+.fixed {
+    position: fixed;
+    top:96px; 
+    left:0;
+    width: 100%; 
+    z-index: 9999;
+    background-color: #fff;
+    padding: 12px 0;
+}
+#shocarset {
+    display: none;
+}
+.comphotohidebtnsec, .compdtlsechide {
+    display: none!important;
+}
+
+.shocarblock {
+    display: none;
+}
+.showallthings {
+    display: block!important;
+}
+.showallcars {
+    display: block!important;
+}
+
+.page-scroll.active {
+    border-bottom: #e74141 solid 2px;
+}
+
+
+/* New CSS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query*/
+
+@media screen and (max-width: 767px){
+  
+
+ .compare-header {
+	font-size: 13px;
+}
+.compare-header svg {
+    width: 10px;
+    height: 10px;
+}
+.comparetitle {
+	font-size: 9px;
+	white-space: nowrap;
+	overflow: auto;
+}
+.comparetitle .text-right {
+    text-align: center!important;
+}
+.comparetitle big {
+    margin: 4px 0;
+}
+.data-row--wrapper {
+	flex-direction: column;
+}
+.sticky {
+	text-align: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.comparetitle big {
+	font-size: 10px;
+}
+.comphotobtn {
+	padding: 14px 0px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.fixed {
+	top: 70px;
+}
+.btntb {
+	font-size: 10px;
+}
+
+
+}

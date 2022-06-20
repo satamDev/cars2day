@@ -1,0 +1,2 @@
+[07-Jun-2022 07:47:34 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/customer/www/v-xplore.com/public_html/dev/ci_cars2day/application/views/finance.php on line 3
+[16-Jun-2022 11:36:38 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/customer/www/v-xplore.com/public_html/dev/ci_cars2day/application/controllers/Welcome.php on line 302
