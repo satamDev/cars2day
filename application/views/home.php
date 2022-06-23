@@ -173,71 +173,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </section>
 </section>
-<?php } ?>        
+<?php } ?>
+
+
 <section class="findcarssec">
     <div class="container">
         <div class="findcar">
             <h2 class="text-center mb-4">Dream it. Buy it. Drive it.</h2>
             <small class="d-block mb-3 text-center" style="font-size:16px">Find Budget Friendly Cars</small>
             <div class="slide5">
+                <?php foreach($bodytype as $key=>$value){ ?>
                 <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Hatchback">
+                    <a href="<?=base_url()?>list?type=<?=$value['name']?>">
                         <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide1.jpg" alt="">
+                            <img src="<?=$value['image']?>" alt="">
                         </div>
-                        <h5>Hatchback</h5>
+                        <h5><?=$value['name']?></h5>
                     </a>
                 </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Sedan">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide2.jpg" alt="">
-                        </div>
-                        <h5>Sedans</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=SUV">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide3.jpg" alt="">
-                        </div>
-                        <h5>Compact SUV</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=SUV">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide4.jpg" alt="">
-                        </div>
-                        <h5>SUV</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=MPV">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide5.jpg" alt="">
-                        </div>
-                        <h5>MPV</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Sedan">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide6.jpg" alt="">
-                        </div>
-                        <h5>Premium Sedan</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Luxury">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide7.jpg" alt="">
-                        </div>
-                        <h5>Luxury</h5>
-                    </a>
-                </div>
-                
-                
+                <?php } ?>
             </div>
             <div class="row mt-4 align-items-end">
                 <div class="col-lg-8 text-center">

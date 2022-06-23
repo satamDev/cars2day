@@ -15,67 +15,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <section class="findcarssec py-5">
     <div class="container">
         <div class="shopfindcar mb-5">
-            <h2 class="mb-5">Browse by Car Type</h2>
-            
+            <h2 class="mb-5">Browse by Car Type</h2>            
+
             <div class="slide5">
+                <?php foreach($bodytype as $key=>$value){ ?>
                 <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Hatchback">
+                    <a href="<?=base_url()?>list?type=<?=$value['name']?>">
                         <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide1.jpg" alt="">
+                            <img src="<?=$value['image']?>" alt="">
                         </div>
-                        <h5>Hatchback</h5>
+                        <h5><?=$value['name']?></h5>
                     </a>
                 </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Sedan">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide2.jpg" alt="">
-                        </div>
-                        <h5>Sedans</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=SUV">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide3.jpg" alt="">
-                        </div>
-                        <h5>Compact SUV</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=SUV">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide4.jpg" alt="">
-                        </div>
-                        <h5>SUV</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=MPV">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide5.jpg" alt="">
-                        </div>
-                        <h5>MPV</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Sedan">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide6.jpg" alt="">
-                        </div>
-                        <h5>Premium Sedan</h5>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?type=Luxury">
-                        <div class="carslidethmb">
-                            <img src="<?=base_url()?>assets/images/carslide7.jpg" alt="">
-                        </div>
-                        <h5>Luxury</h5>
-                    </a>
-                </div>
-                
-                
+                <?php } ?>
             </div>
 
         </div>
@@ -83,230 +35,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="mb-5">Choose your preferred Brand</h2>
             
             <div class="slide5">
+                <?php foreach($brand as $key=>$value){ ?>
                 <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=maruti suzuki">
+                    <a href="<?=base_url()?>list?brand=<?=$value['name']?>">
                         <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Maruti-Suzuki.png" alt="">
+                            <img width="150" src="<?=$value['image']?>" alt="">
                         </div>
                     </a>
                 </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=tata">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/tata.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=datsun">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Datsun.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=renault">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Renault.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=hyundai">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Hyundai.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=toyota">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Toyota.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=premier">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Premier.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=nissan">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Nissan.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=volkswagen">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Volkswagen.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=kia">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Kia.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=honda">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Honda.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=mahindra">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Mahindra.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=isuzu">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Isuzu.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=fiat">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Fiat.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=mg">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/MG.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=skoda">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Skoda.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=ford">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Ford.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=citoren">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Citoren.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=audi">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Audi.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=bmw">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/BMW.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=jaguar">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Jaguar.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=mercedes benz">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/BENZ.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=land rover">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Land-Rover.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=volvo">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Volvo.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=lexus">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Lexus.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=porsche">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Porsche.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=lamborghini">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Lamborghini.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=bentley">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Bentley.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=bugatti">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Bugatti.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=aston martin">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Aston-Martin.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=maserati">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Maserati.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="carslidethmb text-center">
-                    <a href="<?=base_url()?>list?brand=mini cooper">
-                        <div class="carslidethmb">
-                            <img width="150" src="<?=base_url()?>assets/images/Mini-Cooper.png" alt="">
-                        </div>
-                    </a>
-                </div>
+                 <?php } ?>                
             </div>
         </div>
         
