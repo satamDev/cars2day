@@ -25,6 +25,7 @@
 			$result = curl_exec($ch);
 			
 			$r = json_decode($result);
+			return $r;
 		}
 
 		public function home_data() {
@@ -87,5 +88,27 @@
 			];
 			$this->set_message("carvenience", $arr);
 		}
+
+		public function book_test_drive() {
+			$arr = [
+				'car' => [ 'id' => $this->input->post('car_id') ],
+				'user' => [
+					'id' => 0,
+				    'name' => $this->input->post('name'),
+				    'email' => $this->input->post('email'),
+				    'mobile' => $this->input->post('mobile'),
+				],
+				'id' => 0,
+				'description' => '',
+  				'status' => true,				
+				'appoinmentdt' => date("Y-m-d")."T".date("H:i:s")."Z",
+				'testdrivestatus' => [ 'id' => 1 ],
+				'createdBy' => [ 'id' => 1 ],
+				'modifiedBy' => [ 'id' => 1 ]
+			];
+			$response = $this->set_message("bookTestDrive", $arr);
+			echo json_encode($res['message'] = $response->message);
+		}
+
 	}
 ?>

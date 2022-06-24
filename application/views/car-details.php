@@ -1,9 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 ?>
 
-<?php //echo "<pre>"; print_r($_SESSION); echo "</pre>";?>
 <?php 
     if(!empty($car_details)){
         $car_details = $car_details[0];
@@ -31,7 +29,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="ml-0 ml-md-5 mt-3 mt-md-0">
-               <a class="btn1 shadow" href="<?=base_url()?>">Book Test Drive</a>
+               <a class="btn1 shadow" data-toggle="modal" data-target="#bookTestDrivemodl">Book Test Drive</a>
+
+               <!-- <a class="btn1 shadow" href="<?=base_url()?>">Book Test Drive</a> -->
             </div>
 
         </div>
@@ -313,10 +313,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <td>Anti-Lock Breaking System (ABS) </td>
                                     <td class="ftrrghtdtls"></td>
                                   </tr>
-  
-
-                                
-
                              </table>
                          </div>
                     </div>
@@ -356,14 +352,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="tab-pane fade" id="pills-CSpecification" role="tabpanel" aria-labelledby="pills-CSpecification-tab">
            .......
           </div>
-
-
-
-
          <div class="text-center mt-5"> <a class="btn1 shadow" href="#">View Full Specifications</a></div>
     </div>
 </section>
-
 <?php } ?>
 <section class="py-5">
   <div class="container">
@@ -391,11 +382,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
   </div>
-</section>
+</section>    
     
     
-    
-<div class="modal fade modallarge" id="detailsmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade modallarge" id="detailsmodal" tabindex="-1" role="dialog" aria-labelledby="bookTestDrivemodlTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
@@ -428,3 +418,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <img src="<?=base_url()?>assets/images/product1.jpg" alt="Car-Image">
     </a>
 </div> -->     
+
+
+
+<!-- Modal -->
+<div class="modal bookTestDriv fade" id="bookTestDrivemodl" tabindex="-1" role="dialog" aria-labelledby="bookTestDrivemodlTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <h4 class="text-center">We value your privacy.</h4>
+      <p class="text-center">Your information is completely safe with us.</p>
+       <form  id="book_test_drive" action="<?=base_url();?>book_test_drive">
+        <input type="hidden" name="type" value="bookTestDrive">
+        <input type="hidden" name="car_id" value="<?=$this->uri->segment(2)?>">
+        <div class="form-group">
+          <input type="text" id="book_test_drive_name" class="form-control" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <input type="number" id="book_test_drive_mobile" class="form-control" name="mobile" placeholder="Mobile No." required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="text-center pb-4 pt-3"> <button type="submit" class="btn1">Submit</button></div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>

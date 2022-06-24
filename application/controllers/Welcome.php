@@ -22,11 +22,20 @@ class Welcome extends CI_Controller {
 				$value = (array)($value);
 				
 				if($value['status']){
-					$result_array[] = 
+					if($type=='bodytype' || $type == 'brand'){
+						$result_array[] = 
+						[
+							'id' => $value['id'],
+							'name' => $value['name'],							
+							'image' => $value['image']
+						];
+					}else{
+						$result_array[] = 
 						[
 							'id' => $value['id'],
 							'name' => $value['name']
 						];
+					}
 				}
 			}
 		}		
@@ -84,9 +93,13 @@ class Welcome extends CI_Controller {
 			'city' => $this->getCityList()
 		];
 
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];
+
 		$this->load->view('inc/header_links');
 		$this->load->view('inc/header', $data);
-		$this->load->view('home');
+		$this->load->view('home', $data_home);
 		$this->load->view('inc/footer');
 		$this->load->view('inc/footer_links');
 		$this->load->view('customjs/city');
@@ -98,9 +111,14 @@ class Welcome extends CI_Controller {
 			'city' => $this->getCityList()
 		];
 
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+			'brand' => $this->getBrandList()
+		];
+
 		$this->load->view('inc/header_links');
 		$this->load->view('inc/header', $data);
-		$this->load->view('shop_0');
+		$this->load->view('shop_0', $data_home);
 		$this->load->view('inc/footer');
 		$this->load->view('inc/footer_links');
 		$this->load->view('customjs/city');

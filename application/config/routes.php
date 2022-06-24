@@ -80,6 +80,7 @@ $route['home_data'] = 'FormSubmission/home_data';
 $route['sell_data'] = 'FormSubmission/sell_data';
 $route['insurance_data'] = 'FormSubmission/insurance_data';
 $route['carvenience_rto_data'] = 'FormSubmission/carvenience_rto_data';
+$route['book_test_drive'] = 'FormSubmission/book_test_drive';
 
 $route['add_city'] = 'welcome/add_city_in_session';
 
@@ -96,4 +97,3 @@ $route['get_wishlisted_cars'] = 'welcome/get_wishlisted_cars';
 
 $route['get_car_city_wise'] = 'welcome/get_car_city_wise';
 
-$route['get_car_featuers'] = 'welcome/get_car_featuers';
