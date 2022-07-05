@@ -47,8 +47,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-lg-2 col-md-4">
                         <h3 class="mb-3 text-white">Store</h3>
                         <ul class="ftrmnu">
-                            <li><a href="">Browse by Category</a></li>
-                            <li><a href="">Premium Cars</a></li>
+                            <li><a href="<?=base_url()?>list">Browse by Category</a></li>
+                            <li><a href="<?=base_url()?>premium">Premium Cars</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-4">
@@ -61,16 +61,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h3 class="mb-3 text-white">Finance</h3>
                         <ul class="ftrmnu">
                             <li><a href="<?=base_url()?>finance/emi_calculator">EMI Calculator</a></li>
-                            <li><a href="">Cars2day Loans</a></li>
+                            <li><a href="<?=base_url()?>finance">Cars2day Loans</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-4">
                         <h3 class="mb-3 text-white">About</h3>
                         <ul class="ftrmnu">
                             <li><a href="">Management</a></li>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">CSR</a></li>
-                            <li><a href="">Investors</a></li>
+                            <li><a href="<?=base_url()?>contact">Contact Us</a></li>
+
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-4">
@@ -85,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="ftrmnu">
                             <li><a href="<?=base_url()?>carvenience">Carvenience Service</a></li>
                             <li><a href="<?=base_url()?>autoteilee">Autoteilee Parts</a></li>
-                            <li><a href="">FAQ</a></li>
+                            <li><a href="<?=base_url()?>faq">FAQ</a></li>
                             <li><a href="<?=base_url()?>article">Research Articles</a></li>
                         </ul>
                     </div>
@@ -95,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <div class="ftrbtm text-center text-white">
                 <ul class="ftrlink mb-4">
-                    <li><a href="">Privacy Policy</a></li> |  <li><a href="">Terms Of Use</a></li> | <li><a href="">Cookie Policy</a></li> | <li><a href="">Feedback</a></li> | <li><a href="">Partner With Us</a></li> | <li><a href="">Reach to Founder</a></li>
+                    <li><a href="<?=base_url()?>privacy_policy">Privacy Policy</a></li> |  <li><a href="<?=base_url()?>terms_of_use">Terms Of Use</a></li> | <li><a href="<?=base_url()?>cookie_policy">Cookie Policy</a></li> | <li><a href="<?=base_url()?>feedback">Feedback</a></li> | <li><a href="<?=base_url()?>">Partner With Us</a></li> | <li><a href="<?=base_url()?>reach_the_founder">Reach the Founder</a></li>
                 </ul>
                 <small class="d-block">Copy right – Better Drive Technology Pvt Ltd </small>
             </div>

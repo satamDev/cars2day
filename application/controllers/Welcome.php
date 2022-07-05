@@ -4,10 +4,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 	private $original_filter_arr = ['city', 'bodyType', 'brand', 'model', 'color', 'fuelType', 'transmissionType'];
 
-	private function getList($type){
+	private $premium_notation = 'P';
+	private $regular_notation = 'R';
+
+	private function getList($type, $brand_filter = null){
 		// type = city, body_type, brand, model, color, fuel_type, transmission
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, "https://cars2dayapp.in/cars2day/api/".$type."/list");
+		if($brand_filter == null){
+			curl_setopt($ch, CURLOPT_URL, "https://cars2dayapp.in/cars2day/api/".$type."/list");
+		}else{
+			curl_setopt($ch, CURLOPT_URL, "https://cars2dayapp.in/cars2day/api/".$type."/".$brand_filter);
+		}
 		curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, 'GET' );
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -23,12 +30,31 @@ class Welcome extends CI_Controller {
 				
 				if($value['status']){
 					if($type=='bodytype' || $type == 'brand'){
-						$result_array[] = 
-						[
-							'id' => $value['id'],
-							'name' => $value['name'],							
-							'image' => $value['image']
-						];
+						if($type == 'brand' && $brand_filter == 'listpremium'){
+							$result_array[] = 
+							[
+								'id' => $value['id'],
+								'name' => $value['name'],							
+								'image' => $value['image'],
+								'brandType' => $this->premium_notation
+							];
+						}else if($type == 'brand' && $brand_filter == null){
+							$result_array[] = 
+							[
+								'id' => $value['id'],
+								'name' => $value['name'],							
+								'image' => $value['image'],
+								'brandType' => $this->regular_notation
+							];
+						}
+						else{
+							$result_array[] = 
+							[
+								'id' => $value['id'],
+								'name' => $value['name'],							
+								'image' => $value['image']
+							];
+						}
 					}else{
 						$result_array[] = 
 						[
@@ -100,6 +126,267 @@ class Welcome extends CI_Controller {
 		$this->load->view('inc/header_links');
 		$this->load->view('inc/header', $data);
 		$this->load->view('home', $data_home);
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function premium(){ //premium page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+
+		$data_home =[			
+			'premium_brand' => $this->getPremiumBrandList()
+		];
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('premium', $data_home);
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq(){ //faq page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq_find_your_car(){ //faq_find_your_car page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq_find_your_car');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq_buying_cars2day(){ //faq_buying_cars2day page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq_buying_cars2day');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq_selling_cars2day(){ //faq_selling_cars2day page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq_selling_cars2day');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq_finance_insurance(){ //faq_finance_insurance page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq_finance_insurance');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq_services_warranty(){ //faq_services_warranty page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq_services_warranty');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function feedback(){ //feedback page view
+		$data = [
+			'city' => $this->getCityList()
+		];		
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('feedback');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/feedback_js');
+		// $this->load->view('customjs/city');
+		// $this->load->view('customjs/home_js');
+	}
+	
+	public function cookie_policy(){ //cookie_policy page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('cookie_policy');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq_carvenience(){ //faq_carvenience page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq_carvenience');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function faq_autoteilee(){ //faq_autoteilee page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('faq_autoteilee');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function privacy_policy(){ //privacy_policy page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('privacy_policy');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function terms_of_use(){ //terms_of_use page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('terms_of_use');
+		$this->load->view('inc/footer');
+		$this->load->view('inc/footer_links');
+		$this->load->view('customjs/city');
+		$this->load->view('customjs/home_js');
+	}
+	
+	public function reach_the_founder(){ //reach_the_founder page view
+		$data = [
+			'city' => $this->getCityList()
+		];
+		/*
+
+		$data_home =[
+			'bodytype' => $this->getBodyType(),	
+		];*/
+
+		$this->load->view('inc/header_links');
+		$this->load->view('inc/header', $data);
+		$this->load->view('reach_the_founder');
 		$this->load->view('inc/footer');
 		$this->load->view('inc/footer_links');
 		$this->load->view('customjs/city');
@@ -265,6 +552,9 @@ class Welcome extends CI_Controller {
             		echo "<script>document.getElementById(\"select_matches\").innerHTML=".$value['pagination']->totalElements."</script>";
             		continue;
             	}
+
+            	if(!isset($value['image'])) $value['image'] = "";
+
             	$added_in_wishlist = ($this->session->has_userdata('wishlist') && in_array($value['id'], $this->session->userdata('wishlist') ))?true:false;
                 $i++;
                 if($i % 5 == 0){
@@ -377,6 +667,33 @@ class Welcome extends CI_Controller {
 
 		//End Adding City as filter - //
 
+		// if($filter_cars != []){
+		// 	$filter_cars = json_decode($filter_cars);
+			
+		// 	$city_data = ["filterKey" => "brand.category", "operation" => "eq", "value" => $this->regular_notation];
+
+		// 	array_push($filter_cars->searchCriteriaList, $city_data);
+		// 	$filter_cars = json_encode($filter_cars);
+		// }else{
+		// 	$searchCriteriaList[] = [
+		// 		"filterKey" => "brand.category",
+		// 		"operation" => "eq",
+		// 		"value" => $this->regular_notation
+		// 	];
+		// 	$final_array = [
+		// 		"dataOption" => "all",
+		// 		"searchCriteriaList" => $searchCriteriaList
+		// 	];
+		// 	$filter_cars = json_encode($final_array);
+		// }
+
+
+		// echo "<pre>";
+		// print_r($filter_cars);
+		// echo "</pre>";
+
+		
+
 		$ch = curl_init();
 
 		curl_setopt($ch, CURLOPT_URL, "https://cars2dayapp.in/cars2day/api/car/all?pageSize=10&pageNo=".$page_no."&sortBy=id&sortDir=asc");
@@ -405,11 +722,15 @@ class Welcome extends CI_Controller {
 				
 				// id, title, image, price
 
+				if(!isset($value['variant']->carImage)) $value['variant']->carImage = '';
+
+				// 'image' => $value['variant']->carImage,		//previous image key
+
 				$result_array[] = 
 					[
 						'id'=>$value['id'],
 						'title' => $value['title'],
-						'image' => $value['variant']->carImage,
+						'image' => $value['image'],
 						'price' => $value['price'],
 						'fueltype' => $value['fuelType']->name,
 						'color' => $value['color']->name					
@@ -442,6 +763,8 @@ class Welcome extends CI_Controller {
 			$value = $r->data->car;
 			$value = (array)($value);
 
+			if(!isset($value['variant']->carImage)) $value['variant']->carImage = '';
+			
 			$result_array[] = 
 				[
 					'id' => $value['id'],
@@ -451,7 +774,7 @@ class Welcome extends CI_Controller {
 					'kilometers' => $value['kilometers'],
 					'year' => $value['year'],
 					'noofowner' => $value['noofowner'],
-					'image' => $value['variant']->carImage,
+					'image' => $value['image'],
 					'engine' => $value['engine'],
 					'seat' => $value['seat'],
 					'mileage' => $value['mileage'],
@@ -509,7 +832,7 @@ class Welcome extends CI_Controller {
 					'title' => $value['title'],
 					'kilometers' => $value['kilometers'],
 					'year' => $value['year'],
-					'image' => $value['variant']->carImage,
+					'image' => $value['image'],
 					'price' => $value['price'],
 					'bodyType' => $value['bodyType']->name,
 					'brand' => $value['brand']->name,
@@ -542,8 +865,15 @@ class Welcome extends CI_Controller {
         }
 	}
 
-	private function getBrandList(){		
+	public function getBrandList(){		
 		return $this->getList('brand');
+	}
+
+	public function getPremiumBrandList(){
+		// echo "<pre>";
+		// print_r($this->getList('brand', 'listpremium'));	
+		// echo "</pre>";
+		return $this->getList('brand', 'listpremium');
 	}
 
 	public function get_brand(){
@@ -627,6 +957,10 @@ class Welcome extends CI_Controller {
 
 		$arr = explode("@", $filter);	//explode filter key and value
 
+		// echo "<pre>";
+		// print_r($arr);
+		// echo "</pre>";
+
 		if($arr[0] == 'price'){
 			$this->filter_price($arr[1]);
 		}else{		
@@ -649,7 +983,42 @@ class Welcome extends CI_Controller {
 			$searchCriteriaList = [];
 			$original_filter_arr = $this->original_filter_arr;
 
+
+			$regular_brand = $this->getBrandList();
+			$premium_brand_list = $this->getPremiumBrandList();
+
+			//brand category regular or premium start
 			foreach($session_array as $key => $value){
+				if($key == 'brand'){
+					if(in_array($value, $regular_brand)){
+						$searchCriteriaList[] = [
+							"filterKey" => "brand.category",
+							"operation" => "eq",
+							"value" => $this->regular_notation
+						];
+						break;
+					}else if(in_array($value, $regular_brand)){
+						$searchCriteriaList[] = [
+							"filterKey" => "brand.category",
+							"operation" => "eq",
+							"value" => $this->premium_notation
+						];
+						break;
+					}
+				}else{
+					$searchCriteriaList[] = [
+						"filterKey" => "brand.category",
+						"operation" => "eq",
+						"value" => $this->regular_notation
+					];
+					break;
+				}
+			}
+			//brand category regular or premium end
+
+
+			//filter option creating start
+			foreach($session_array as $key => $value){	
 				$filter_type = "";	
 
 				if(in_array($key, $original_filter_arr)){
@@ -664,6 +1033,8 @@ class Welcome extends CI_Controller {
 					}
 				}
 			}
+			//filter option creating end
+			
 			$final_array = [
 				"dataOption" => "all",
 				"searchCriteriaList" => $searchCriteriaList

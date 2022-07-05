@@ -18,8 +18,34 @@
 				});
 		<?php }?>
 
+		show_emi();
+
+
+	    $("#emi_downpayment").on("input", function(){	        
+	        show_emi();
+	    });
+
+	    $("#emi_amount").on("input", function(){	        
+	        show_emi();
+	    });
+
+	    $("#emi_year").on("change", function(){	        
+	        show_emi();
+	    });
+
 
 	});
+
+	function show_emi(){
+		let emi_downpayment = $("#emi_downpayment").val();
+		let emi_amount = $("#emi_amount").val();
+		let emi_year = $("#emi_year").val();
+		let calculation;
+		calculation = eval(Number(emi_downpayment) + Number(emi_amount * emi_year * 12));
+		$("#extimated_price").html(calculation);
+		// let emi_downpayment = $("#extimated_price").val();
+		// $("#fetch_with_budget").arrr('href', '<?=base_url()?>list?price='+calculation);
+	}
 	function get_recently_viewed_cars(){
 		$.ajax({
 			type: "GET",

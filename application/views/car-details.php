@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="ml-0 ml-md-5 mt-3 mt-md-0">
-                <h5 class="text-white">₹12,500/month</h5>
-                <span class="d-block">Zero downpayment</span>
+                <!-- <h5 class="text-white">₹12,500/month</h5>
+                <span class="d-block">Zero downpayment</span> -->
             </div>
 
             <div class="ml-0 ml-md-5 mt-3 mt-md-0">

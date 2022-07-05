@@ -36,7 +36,6 @@
             <div class="artibanner" style="background: url(<?=base_url()?>assets/images/articlebanner.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
                 <div class="container text-center text-white">
                     <h2 class="text-white mb-3">To Shift or Not to Shift</h2>
-                    <p>Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry</p>
                 </div>
             </div>
             <div class="py-5 articlcon">
@@ -66,7 +65,7 @@
 
 
                                 <h3 class="mb-3">Practice makes Perfect</h3>
-                                <p>To Change gears, driver Presses down the clutch pedal and moves the Gear shift lever, then releases the clutch. Engage the Clutch Pedal too fast – engine stall & too slow – premature wear (Practice makes Perfect)</p>
+                                <p>To Change gears, driver Presses down the clutch pedal and moves the Gear shift lever, then releases the clutch. Engage the Clutch Pedal too fast – engine stall & too slow – premature wear (Practice makes Perfect)</p>
                             </div>
                             <div class="facts_divs p-2" style="background: url(<?=base_url()?>assets/images/diff_backgrnd.png); background-repeat: no-repeat; background-size: 100% 100%; background-position: center center;">
                                 <div class="row align-items-center">
@@ -142,7 +141,7 @@ Automatic transmission.</h2>
                                         <li><img src="<?=base_url()?>assets/images/rghtarw.png" class="pr-2" alt=""> Higher Purchase price than 
 Manual transmission</li>
                                         <li><img src="<?=base_url()?>assets/images/rghtarw.png" class="pr-2" alt=""> Higher Repair costs</li>
-                                        <li><img src="<?=base_url()?>assets/images/rghtarw.png" class="pr-2" alt=""> Less Fuel efficient – But Gap is reducing through evolving</li>
+                                        <li><img src="<?=base_url()?>assets/images/rghtarw.png" class="pr-2" alt=""> Less Fuel efficient – But Gap is reducing through evolving</li>
                                     </ul>
                                 </div>
                             </div> 

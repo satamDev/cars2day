@@ -12,10 +12,12 @@ jQuery(document).ready(function($){
     $('.inrpg').css('margin-top',HTHeight + SRCHHeight);
     $('.-hdrhight, .slick-vertical .slick-list').css('height',WHeight - HTHeight - SRCHHeight);
     
+    
     setTimeout(function() {
         
         $('.slick-vertical .slick-list, .slider-for .slider-banner-image').css('max-height',WHeight - HTHeight - SRCHHeight);
     }, 1000);
+    
     
     
     $(window).scroll(function () {
@@ -38,18 +40,22 @@ jQuery(document).ready(function($){
     
     setTimeout(function() {
         $('.instaslide .slick-disabled + .slick-list > .slick-track').css('left',+ offset.left );
+        $('.lovedslide .slick-prev').css('left', + offset.left - 15);
+        $('.lovedslide .slick-next').css('right', + offset.left - 15);
     }, 1000);
+    $('.lovedcon').css('left', - offset.left);
     
 
+
     $('.homeslider').slick({
-  dots: false,
-  infinite: true,
+        dots: true,
+        infinite: true,
         autoplay: true,
         arrows: false,
         pauseOnHover:false,
-  fade: true,
-  cssEase: 'linear'
-});
+        fade: true,
+        cssEase: 'linear'
+    });
     
     
     $('.slide5').slick({
@@ -74,6 +80,41 @@ jQuery(document).ready(function($){
               breakpoint: 600,
               settings: {
                 slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+    
+    $('.slide4').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        //autoplay: true,
+        infinite: false,
+        autoplaySpeed: 2000,
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 3,
                 slidesToScroll: 1
               }
             },
@@ -375,7 +416,7 @@ jQuery(document).ready(function($){
           focusOnSelect: true
         });
     
-    
+
   
   
  
@@ -672,8 +713,22 @@ function calculate_interest(){
     
 
 
+$('.testislide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+         infinite: true,
+    dots: false,
+    autoplay: true,
+    });
 
-
+    $('.lovedslide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+        dots: false,
+    });
     
     
     

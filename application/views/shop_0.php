@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7">
-                <h1 class="mb-3 text-white">Have a New Beginning in a Pre-Loved Car of your Own</h1>
+                <h1 class="mb-3 text-white" style="text-shadow: 2px 2px #000;">Have a New Beginning in a Pre-Loved Car of your Own</h1>
                 <big class="d-block text-white">Experience re-defined to Perfection @ Cars2day</big>
             </div>
         </div>
@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </a>
                 </div>
-                 <?php } ?>                
+                <?php } ?>
             </div>
         </div>
         
@@ -168,7 +168,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                  <!-- loaded cars according to city here -->
             </div>
             <div class="text-center mt-5">
-                <a href="#" class="btn1">Shop near you</a>
+                <a href="<?=base_url()?>list" class="btn1">Shop near you</a>
             </div>
         </div>
         
@@ -180,27 +180,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="processthmb">
                         <span><img src="<?=base_url()?>assets/images/gryico1.png" alt=""></span>
                         <h4 class="text-white">Instant test drive</h4>
-                        <p class="text-white">Take an instant test drive to see if the chosen pre-loved car is what you were looking for & then proceed to buy!</p>
+                        <p class="text-white">Take an instant test drive to see if the chosen pre-loved car<br> is what you were looking for & then proceed to buy!</p>
                     </div>
                     <div class="processthmb">
                         <span><img src="<?=base_url()?>assets/images/gryico2.png" alt=""></span>
                         <h4 class="text-white">Free emergency RSA</h4>
-                        <p class="text-white">No worries if you are stuck on the road, we give your Free Emergency Roadside Assistance.</p>
+                        <p class="text-white">No worries if you are stuck on the road,<br> we give your Free Emergency Roadside Assistance.</p>
                     </div> 
                 <div class="processthmb">
                         <span><img src="<?=base_url()?>assets/images/process1.png" alt=""></span>
                         <h4 class="text-white">210-point certification</h4>
-                        <p class="text-white">Every car undergoes a 210 point inspection by our highly experienced experts</p>
+                        <p class="text-white">Every car undergoes a 210 point inspection <br>by our highly experienced experts</p>
                     </div>
                     <div class="processthmb">
                         <span><img src="<?=base_url()?>assets/images/process2.png" alt=""></span>
                         <h4 class="text-white">24 hrs loan process</h4>
-                        <p class="text-white">We aid you with finance support through our leading loan providers in just 24hrs</p>
+                        <p class="text-white">We aid you with finance support <br>through our leading loan providers in just 24hrs</p>
                     </div>
                     <div class="processthmb">
                         <span><img src="<?=base_url()?>assets/images/process3.png" alt=""></span>
                         <h4 class="text-white">Same day RC Transfer</h4>
-                        <p class="text-white">We give you a hassle free experience by doing same day RC Transfer</p>
+                        <p class="text-white">We give you a hassle free experience <br>by doing same day RC Transfer</p>
                     </div>
             </div>
         </div>
@@ -213,22 +213,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-4 text-center mb-4">
                         <div class="gurwrp">
                             <img src="<?=base_url()?>assets/images/whyico1.png" alt="">
-                            <h3 class="py-3">Flexible Finance</h3>
-                            <p>We offer a wide range of flexible finance options tailored for your budget & requirements</p>
+                            <h3 class="py-2">Flexible Finance</h3>
+                            <p>We offer a wide range of <br>flexible finance options tailored <br>for your budget & requirements</p>
                         </div>
                     </div>
                     <div class="col-md-4 text-center mb-4">
                         <div class="gurwrp">
                             <img src="<?=base_url()?>assets/images/whyico2.png" alt="">
-                            <h3 class="py-3">Quality Inspection</h3>
-                            <p>All of our cars are thoroughly given a quality check by our expert technicians to deliver in the best possible condition.</p>
+                            <h3 class="py-2">Quality Inspection</h3>
+                            <p>All of our cars are thoroughly given a <br>quality check by our expert technicians to <br>deliver in the best possible condition.</p>
                         </div>
                     </div>
                     <div class="col-md-4 text-center mb-4">
                         <div class="gurwrp">
                             <img src="<?=base_url()?>assets/images/whyico3.png" alt="">
-                            <h3 class="py-3">Warranty & Free services</h3>
-                            <p>Enjoy benefits like warranty along  with free services for your purchase of car</p>
+                            <h3 class="py-2">Warranty & Free services</h3>
+                            <p>Enjoy benefits like warranty <br>along  with free services for <br>your purchase of car</p>
                         </div>
                     </div>
                 </div>
@@ -443,8 +443,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <td class="value">23</td>
                         </tr>
                     </tbody>
-                </table>
-            </div> -->
+                </table>-->
+            </div> 
       </div>
     </div>
   </div>

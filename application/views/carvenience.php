@@ -14,8 +14,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <p>Keep your car running smooth with our Preventive Maintenance Repairs. 
-And yes, you get it all in ‘Wallet-friendly’ price!</p>
+                <p>Keep your car running smooth with our Preventive Maintenance Repairs.<br> And yes, you get it all in ‘Wallet-friendly’ price!</p>
         <a href="https://carvenience.in/" class="btn1" target="_blank">Go to Carvenience</a>
             </div>
         </div>
@@ -42,7 +41,7 @@ And yes, you get it all in ‘Wallet-friendly’ price!</p>
                             </div>
                             <div class="areyoucon">
                                 <h5>Network</h5>
-                                <p>We widely cover all locations via qualified & professional network of Garages</p>
+                                <p>We widely cover all locations via qualified <br>& professional network of Garages</p>
                             </div>
                         </div>
                         <div class="d-flex w-100 my-4">
@@ -51,7 +50,7 @@ And yes, you get it all in ‘Wallet-friendly’ price!</p>
                             </div>
                             <div class="areyoucon">
                                 <h5>Warranty</h5>
-                                <p>We ensure positive post service experience through 
+                                <p>We ensure positive post service experience through<br> 
 our state of the art systems & processes</p>
                             </div>
                         </div>
@@ -61,9 +60,9 @@ our state of the art systems & processes</p>
                             </div>
                             <div class="areyoucon">
                                 <h5>Parts</h5>
-                                <p>We assure high performance by utilizing genuine 
-quality tested parts through Autoteilee Flexible 
-Options: We match your varied needs via three 
+                                <p>We assure high performance by utilizing genuine <br>
+quality tested parts through Autoteilee Flexible <br>
+Options: We match your varied needs via three <br>
 types of plans in each segment</p>
                             </div>
                         </div>

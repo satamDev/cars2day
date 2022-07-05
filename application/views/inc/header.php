@@ -2,14 +2,28 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<body class="<?=(!$this->uri->segment(1)=='')?'inrpg':''?>">
+<body class="<?=( $this->uri->segment(1)=='' || $this->uri->segment(1)=='premium' )?'':'inrpg'?>">
 <header class="header" id="header">
     <section class="hdrtop">
         <div class="container">
             <div class="d-flex align-items-center">
-                <a href="<?=base_url()?>" class="logo">
-                    <img src="<?=base_url()?>assets/images/logo.png" alt="logo">
+                
+				<?php
+if (stripos($_SERVER['REQUEST_URI'], 'premium')){
+	?>
+     <a href="<?=base_url()?>" class="logo">
+                    <img src="<?=base_url()?>assets/images/logo-premium.png" alt="logo" width="208">
                 </a>
+				<?php
+}
+else{
+	?>
+     <a href="<?=base_url()?>" class="logo">
+                    <img src="<?=base_url()?>assets/images/logo.png" alt="logo" width="208">
+                </a>
+				<?php
+}
+?>
                 <nav class="nav">
                     <div class="menu-main-menu-container">
                         <ul class="primary-menu">
@@ -24,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="<?=base_url()?>finance">Finance</a>
                             </li>
                             <li class="<?=($this->uri->segment(1) == 'premium')?'active':''?>">
-                                <a href="<?=base_url()?>">Premium</a>    
+                                <a href="<?=base_url()?>premium">Premium</a>    
                             </li>
                             <li class="<?=( $this->uri->segment(1) == 'insurance' || $this->uri->segment(1) == 'carvenience' || $this->uri->segment(1) == 'autoteilee' || $this->uri->segment(1) == 'article' || $this->uri->segment(1) == 'rto' )?'active':''?>">
                                 <a href="">More</a>
@@ -43,7 +57,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <a href="<?=base_url()?>article">Research Articles</a>
                                     </li>
                                     <li>
-                                        <a href="<?=base_url()?>rto">RTO Services Forms</a>
+                                        <a href="<?=base_url()?>rto">RTO Services</a>
+                                    </li>
+									<li>
+                                        <a href="<?=base_url()?>download">Download Forms</a>
                                     </li>
                                 </ul>
                             </li>

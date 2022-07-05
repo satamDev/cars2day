@@ -110,5 +110,26 @@
 			echo json_encode($res['message'] = $response->message);
 		}
 
+		public function feedback_data() {
+			$arr = [
+				'createdBy' => [ 'id' => 1 ],
+				'dtcr' => date("Y-m-d")."T".date("H:i:s")."Z",
+				'dtlm' => date("Y-m-d")."T".date("H:i:s")."Z",
+				'id' => 0,
+				'message' => $this->input->post('message'),
+				'userrating' => $this->input->post('feedback'),
+				'modifiedBy' => [ 'id' => 1 ],
+				'status' => true,				
+				'user' => [
+					'id' => 0,
+				    'name' => $this->input->post('name'),				    
+				    'mobile' => $this->input->post('mobile'),
+				    'email' => $this->input->post('email'),
+				]
+			];
+			$response = $this->set_message("websiteSupport", $arr);
+			echo json_encode($res['message'] = $response->message);
+		}
+
 	}
 ?>

@@ -71,6 +71,7 @@ $route['filter_price'] = 'welcome/filter_price';
 
 $route['get_bodytype'] = 'welcome/get_bodytype';
 $route['get_brand'] = 'welcome/get_brand';
+$route['get_premium_brand'] = 'welcome/get_premium_brand';
 $route['get_model'] = 'welcome/get_model';
 $route['get_fueltype'] = 'welcome/get_fueltype';
 $route['get_transmissiontype'] = 'welcome/get_transmissiontype';
@@ -81,6 +82,7 @@ $route['sell_data'] = 'FormSubmission/sell_data';
 $route['insurance_data'] = 'FormSubmission/insurance_data';
 $route['carvenience_rto_data'] = 'FormSubmission/carvenience_rto_data';
 $route['book_test_drive'] = 'FormSubmission/book_test_drive';
+$route['feedback_data'] = 'FormSubmission/feedback_data';
 
 $route['add_city'] = 'welcome/add_city_in_session';
 
@@ -96,4 +98,21 @@ $route['get_first_ten_cars'] = 'welcome/get_first_ten_cars';
 $route['get_wishlisted_cars'] = 'welcome/get_wishlisted_cars';
 
 $route['get_car_city_wise'] = 'welcome/get_car_city_wise';
+$route['premium'] = 'welcome/premium';
+$route['faq'] = 'welcome/faq';
+
+$route['faq_find_your_car'] = 'welcome/faq_find_your_car';
+$route['faq_buying_cars2day'] = 'welcome/faq_buying_cars2day';
+$route['faq_selling_cars2day'] = 'welcome/faq_selling_cars2day';
+$route['faq_finance_insurance'] = 'welcome/faq_finance_insurance';
+$route['faq_services_warranty'] = 'welcome/faq_services_warranty';
+$route['faq_carvenience'] = 'welcome/faq_carvenience';
+$route['faq_autoteilee'] = 'welcome/faq_autoteilee';
+
+$route['feedback'] = 'welcome/feedback';
+$route['cookie_policy'] = 'welcome/cookie_policy';
+$route['privacy_policy'] = 'welcome/privacy_policy';
+$route['terms_of_use'] = 'welcome/terms_of_use';
+$route['reach_the_founder'] = 'welcome/reach_the_founder';
+$route['contact'] = 'welcome/contact';
 

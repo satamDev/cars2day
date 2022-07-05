@@ -131,14 +131,14 @@ Market Rate</div>
                     <h3 class="">Different Types of Car Insurance Policies</h3>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-md-8">
                         <div class="row align-items-center financezigzag flex-row-reverse mb-5">
                     <div class="col-md-5 px-lg-5 mb-4">
                         <img class="w-100" src="<?=base_url()?>assets/images/Private-car-package-policy.png" alt="">
                     </div>
                     <div class="col-md-7 mb-4 px-lg-5">
                         <h4 class="mb-2">Private car package policy</h4>
-                        <p>This policy entirely covers the cost incurred by third party damage along with your car damage. It also covers car theft & damages caused by fire, theft or natural disasters.</p>
+                        <p>This policy entirely covers the cost incurred by <br>third party damage along with your car damage. <br>It also covers car theft & damages caused by fire, <br>theft or natural disasters.</p>
                     </div>
                 </div>
                 <div class="row align-items-center financezigzag mb-5">
@@ -146,8 +146,8 @@ Market Rate</div>
                         <img class="w-100" src="<?=base_url()?>assets/images/Stand-alone-own-damage.png" alt="">
                     </div>
                     <div class="col-md-7 mb-4 px-lg-5">
-                        <h4 class="mb-2">Stand-alone own-damage car insurance</h4>
-                        <p>Any accidental car damage will be covered in this policy. This include natural disasters like flood, earthquake, cyclone, or any man-made disaster like theft or strike. An active third party insurance is required to avail this insurance.</p>
+                        <h4 class="mb-2">Stand-alone own-damage <br>car insurance</h4>
+                        <p>Any accidental car damage will be covered in this policy. <br>This include natural disasters like flood, earthquake, cyclone, <br>or any man-made disaster like theft or strike. An active <br>third party insurance is required to avail this insurance.</p>
                     </div>
                     
                 </div>
@@ -157,7 +157,7 @@ Market Rate</div>
                     </div>
                     <div class="col-md-7 mb-4 px-lg-5">
                         <h4 class="mb-2">Third party car insurance</h4>
-                        <p>This policy entirely covers the cost incurred by third party damage along with your car damage. It also covers car theft & damages caused by fire, theft or natural disasters.</p>
+                        <p>This policy entirely covers the cost incurred by <br>third party damage along with your car damage. <br>It also covers car theft & damages caused by fire, <br>theft or natural disasters.</p>
                     </div>
                 </div>
                     </div>

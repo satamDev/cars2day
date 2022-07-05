@@ -112,9 +112,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class="col-lg-6 col-md-8">
                     <div class="homebannercaption">
-                        <h1 class="mb-3">Shift to <br>better drive. <img class="pl-2 d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
-                        <p>Make your journey impeccable with a Plethora of Memories in your New Pre-loved Car.</p>
-                        <a href="<?=base_url()?>store" class="btn1">Find your Dream Car</a>
+                        <h1 class="mb-3">Shift to <br>better drive <img class="d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
+                        <p>Make your journey impeccable with a Plethora of <br>Memories in your New Pre-loved Car</p>
+                        <a href="<?=base_url()?>list" class="btn1">Find your Dream Car</a>
                     </div>
                 </div>
             </div>
@@ -125,22 +125,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class="col-lg-6 col-md-8">
                     <div class="homebannercaption">
-                        <h1 class="mb-3"><span>No Looking Back <br>after Purchase-</span><br>Quality Guaranteed <img class="pl-2 d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
-                        <p>We ensure positive post service experience through our state of the art systems & processes.</p>
-                        <a href="<?=base_url()?>store" class="btn1">Find your Dream Car</a>
+                        <h1 class="mb-3"><span>No Looking Back <br>after Purchase-</span><br>Quality Guaranteed <img class="d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
+                        <p>We ensure positive post service experience <br> through our state of the art systems & processes.</p>
+                        <a href="<?=base_url()?>list" class="btn1">Find your Dream Car</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="homebanner" style="background-image: url(<?=base_url()?>assets/images/homebanner1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <section class="homebanner" style="background-image: url(<?=base_url()?>assets/images/homebanner1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center top;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-md-10">
                     <div class="homebannercaption">
-                        <h1 class="mb-3"><span>Purchase Used Car with </span> <br>great choice & value for money <img src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40" class="pl-2 d-inline-block"></h1>
+                        <h1 class="mb-3"><span>Purchase Used Car with </span> <br>great choice & value for money <img src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40" class="d-inline-block"></h1>
                         <p>Select your right match of pre-loved car from a<br> wide spectrum of leading car brands</p>
-                        <a href="<?=base_url()?>store" class="btn1">Find your Dream Car</a>
+                        <a href="<?=base_url()?>list" class="btn1">Find your Dream Car</a>
                     </div>
                 </div>
             </div>
@@ -150,9 +150,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8">
-                    <div class="homebannercaption">
-                        <h1 class="mb-3"><span>Your Car Service - </span><br>Made Simple <br>& Better <img class="pl-2 d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
-                        <p>Get a Car Service Experience like never before - Quality & Pocket-friendly service Assured!</p>
+                    <div class="homebannercaption" style="position: relative;top: -30px;">
+                        <h1 class="mb-3"><span>Your Car Service - </span><br>Made Simple <br>& Better <img class="d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
+                        <p>Get a Car Service Experience like never before -<br> Quality & Pocket-friendly service Assured!</p>
                         <a href="<?=base_url()?>carvenience" class="btn1">Go to Carvenience</a>
                     </div>
                 </div>
@@ -164,8 +164,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class="col-lg-6 col-md-8">
                     <div class="homebannercaption">
-                        <h1 class="mb-3"><span class="text-white">Genuine Car <br>Spare Parts for</span><br> your Pre-loved Car <img class="pl-2 d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
-                        <p class="text-white">Choose from a myriad of 5lacs of Replacement Parts & much more</p>
+                        <h1 class="mb-3"><span class="text-white">Genuine<br> Car Spare Parts for</span><br> your Pre-loved Car <img class="d-inline-block" src="<?=base_url()?>assets/images/double-right-arrow.png" alt="" width="40"></h1>
+                        <p class="text-white">Choose from a myriad of ₹ 5lacs of Replacement Parts <br>& much more</p>
                         <a href="<?=base_url()?>autoteilee" class="btn1">Visit Autoteilee</a>
                     </div>
                 </div>
@@ -202,27 +202,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <label class="d-block m-0">Down Payment</label>
                                 <div class="d-flex justify-content-center align-items-center">
                                     <span>&#x20B9;</span>
-                                    <input type="text" value="4,000" size="5">
+                                    <input type="number" id="emi_downpayment" value="100000" size="5">
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="d-block m-0">EMI</label>
                                 <div class="d-flex justify-content-center align-items-center">
                                     <span>&#x20B9;</span>
-                                    <input type="text" value="2,50,000" size="5">
+                                    <input type="number" id="emi_amount" value="50000" size="5">
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            function resizable (el, factor) {
+  var int = Number(factor) || 7.7;
+  function resize() {el.style.width = ((el.value.length+1) * int) + 'px'}
+  var e = 'keyup,keypress,focus,blur,change'.split(',');
+  for (var i in e) el.addEventListener(e[i],resize,false);
+  resize();
+}
+resizable(document.getElementById('emi_downpayment'),10);
+                            resizable(document.getElementById('emi_amount'),10);
+                            
+                        </script>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="d-block m-0">Tenure</label>
-                                <select>
-                                    <option>Good 700-750...</option>
-                                    <option>Good 700-750...</option>
-                                    <option>Good 700-750...</option>
-                                    <option>Good 700-750...</option>
+                                <select id="emi_year">
+                                    <option value="2">2 Years</option>
+                                    <option value="3">3 Years</option>
+                                    <option value="4">4 Years</option>
+                                    <option value="5">5 Years</option>
+                                    <option value="6" selected>6 Years</option>
+                                    <option value="7">7 Years</option>
+                                    <option value="8">8 Years</option>
                                 </select>
                             </div>
                         </div>
@@ -242,13 +258,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </h4>
                         <div class="d-flex justify-content-center align-items-center">
                             <span>&#x20B9;</span>
-                            <big class="d-block">4,75,000</big>
+                            <big class="d-block" id="extimated_price"></big>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="shopwithbudbtn text-center">
-                <a href="" class="btn1">Fetch Cars with Budget</a>
+                <a href="<?=base_url()?>list" id="fetch_with_budget" class="btn1">Fetch Cars with Budget</a>
             </div>
         </div>
     </div>
@@ -260,9 +276,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <img src="<?=base_url()?>assets/images/wayitsec.jpg" alt="" class="w-100">
         <span></span>
     </div>
-    <div class="container">
+    <div class="container modalreltv">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 leftshowhide">
                 <div class="wayit fadeUp in-view">
                     <h3 class="text-center p-3">Why Customers prefer Cars2day?</h3>
                     <div class="wayitlistwrp">
@@ -329,16 +345,129 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
+        <div class="modal fade bd-example-modal-lg" id="preferpopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg height="20" width="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve">
+                <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 
+                185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 "/>
+            </svg>
+        </button>
+        <section class="tabslidersec">
+    <div class="container">
+      <div class="px-4 pt-4 bg-white tabsliderbox">
+
+
+        <div class="slidertab-for my-4">
+          <div class="">
+
+
+            <div class="tabdtlsboxslider">
+              <div class="tabdtlsbox">
+                <div class="tabdtlsvoxImg mb-3">
+                  <span><img src="<?=base_url()?>assets/images/preowned.png" class="w-100" alt=""></span>
+                </div>
+                <h3>Preowned</h3>
+                <p>Cars2day proudly holds a myriad of pre-owned cars form a multitude of experienced, customer <br>friendly independent dealers. When compared to buying a new car, pre-loved cars thoroughly <br>benefits the terms of cost & immense gain on depreciation</p>
+              </div>
+            </div>
+            
+
+            <div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
+
+
+
+          </div>
+          <div class="">
+
+            <div class="tabdtlsboxslider">
+              <div class="tabdtlsbox">
+                <div class="tabdtlsvoxImg mb-3">
+                  <span><img src="<?=base_url()?>assets/images/Refurbished.png" class="w-100" alt=""></span>
+                </div>
+                <h3>Refurbished</h3>
+                <p>Refurbished cars are entirely tested for quality & function of system and also, we replace / repair the necessary <br>parts whenever required. The process of refurbishment proffers buyers the freedom from any expenditure <br>right after their purchase. At Cars2day, Refurbishment is defined by sheer perfection by our experts.</p>
+              </div>
+            </div>
+              <div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
+          </div>
+          <div class="">
+
+            <div class="tabdtlsboxslider">
+              <div class="tabdtlsbox">
+                <div class="tabdtlsvoxImg mb-3">
+                  <span><img src="<?=base_url()?>assets/images/Ceritifed.png" class="w-100" alt=""></span>
+                </div>
+                <h3>Certified</h3>
+               <p>Every car @ Cars2day never misses to undergo a rigorous 210 point inspection by our technical experts. It covers the <br>Mechanical Systems, Body, Chasis in depth for the Mal function, Misalignment and Ensure that its roadworthiness. <br>After Inspection, a Certificate will be issued with the Five Star Rating Scale, based upon the New Car Standards.</p>
+              </div>
+            </div>
+                <div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
+          </div>
+          <div class="">
+            
+            <div class="tabdtlsboxslider">
+            
+
+              <div class="tabdtlsbox">
+                <div class="tabdtlsvoxImg mb-3">
+                  <span><img src="<?=base_url()?>assets/images/Warranty2.png" class="w-100" alt=""></span>
+                </div>
+                <h3>Warranty/Free Service</h3>
+               <p>Every certified car of Cars2day carries a 25000kms or 1 year comprehensive warranty that covers the <br>major element of engine & gear box. At Cars2day Authorised Network Garages, we proffer two <br>Labour Free services to all our Certified cars in every Six Months or 10000 KMS interval.</p>
+              </div>
+
+            </div>
+
+<div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
+          </div>
+        </div>
+
+
+        <div class="slidertab-nav mx-lg-4">
+          <div>
+            <a class="crviewbtn active" id="pills-Preowned-tab" data-toggle="pill" href="#pills-Preowned" role="tab"
+              aria-controls="pills-Preowned" aria-selected="true">Preowned</a>
+          </div>
+          <div>
+            <a class="crviewbtn" id="pills-Refurbished-tab" data-toggle="pill" href="#pills-Refurbished" role="tab"
+              aria-controls="pills-Refurbished" aria-selected="false"> Refurbished</a>
+          </div>
+          <div>
+            <a class="crviewbtn" id="pills-Certified-tab" data-toggle="pill" href="#pills-Certified" role="tab"
+              aria-controls="pills-Certified" aria-selected="false"> Certified</a>
+          </div>
+          <div>
+            <a class="crviewbtn" id="pills-Warranty-tab" data-toggle="pill" href="#pills-Warranty" role="tab"
+              aria-controls="pills-Warranty" aria-selected="false"> Warranty/Free Service</a>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    
 </section>
 
 <section class="py-5">
     <div class="instasec">
         <div class="container">
             <h2 class="mb-2">Sharing Moments of Incredible Journey @ Cars2day </h2>
-            <small class="mb-5 d-block">#Cars2dayJourneyforever</small>
+            <small class="mb-5 d-block text-center" style="font-width:bold;">#Cars2dayJourneyforever</small>
         </div>
-        <div class='sk-ww-instagram-hashtag-feed' data-embed-id='82997'></div><script src='https://widgets.sociablekit.com/instagram-hashtag-feed/widget.js' async defer></script>
+        <!-- Instagram integration start -->
+        <!-- <div class='sk-ww-instagram-hashtag-feed' data-embed-id='82997'></div><script src='https://widgets.sociablekit.com/instagram-hashtag-feed/widget.js' async defer></script> -->
+        <!-- Instagram integration end -->
+
+
         <!-- <div class="instaslide">
             <div class="instaslideinr">
                 <a href="#" class="d-block">
@@ -483,8 +612,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="fadeUp">
                 
                 <div class="tradefrmsec p-4 bg-white">
-                    <h3 class="mb-1">Give us 2 Minuts - <br>Get your offer NOW</h3>
-                    <small class="d-block mb-3">And then your journey beging forever!</small>
+                    <h3 class="mb-1">Get a real offer in minutes</h3>
+                    <small class="d-block mb-3">Most cars qualify; some we'll ask to see in person.</small>
                     <div class="tradefrmtab">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                           <li class="nav-item">
@@ -496,31 +625,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                <div class="trdfrm">
+                                <div class="trdfrm" id="acco">
                                     <form id="Selling" action="<?=base_url();?>home_data">
                                         <input type="hidden" name="type" value="selling">
-                                        <div class="form-group">
-                                            <input type="text" name="registrationNumber" class="form-control" placeholder="Regd. No."  required>
+                                        <div class="collapse show" id="next1a" aria-labelledby="next1a" data-parent="#acco">
+                                            <div class="form-group">
+                                                <input type="text" name="registrationNumber" class="form-control" placeholder="Regd. No."  required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="make" class="form-control" placeholder="Make" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="model" class="form-control"  placeholder="Modal" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" name="year" class="form-control"  placeholder="Year (Ex. 2015)" required>
+                                            </div>
+                                            <div class="arwdwn" data-toggle="collapse" data-target="#next1" aria-expanded="false" aria-controls="next1">
+                                                <i class="fas fa-chevron-down fa-fw"></i>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="text" name="make" class="form-control" placeholder="Make" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="model" class="form-control"  placeholder="Modal" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" name="year" class="form-control"  placeholder="Year (Ex. 2015)" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="owner" class="form-control"  placeholder="Owner" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="location" class="form-control"  placeholder="Location" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" name="kilometers" class="form-control"  placeholder="Kilometers" required>
-                                        </div> 
-                                        <div class="collapse" id="next1">
+                                        <div class="collapse" id="next1" aria-labelledby="next1" data-parent="#acco">
+											<div class="arwdwn" data-toggle="collapse" data-target="#next1a" aria-expanded="false" aria-controls="next1a">
+                                                <i class="fas fa-chevron-up fa-fw"></i>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="owner" class="form-control"  placeholder="Owner" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="location" class="form-control"  placeholder="Location" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" name="kilometers" class="form-control"  placeholder="Kilometers" required>
+                                            </div>
                                             <div class="form-group">
                                                 <input type="text" id="selling_name" class="form-control" placeholder="Name" name="name">
                                             </div>
@@ -528,10 +665,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <input type="tel" id="selling_mobile" class="form-control" placeholder="Phone no." name="mobile">
                                             </div>
                                         </div>
-                                        <div class="minsmackup">
-                                            <div class="arwdwn" data-toggle="collapse" data-target="#next1">
-                                                <i class="fas fa-chevron-down fa-fw"></i>
-                                            </div>
+                                        <div class="">
                                             <em class="d-block text-center">Get Pre evaluation done at your door step</em>
                                         </div>
                                         <button class="btn1" type="submit">Kick Start your Drive</button>
@@ -539,31 +673,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                             </div>
                           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                <div class="trdfrm">
+                                <div class="trdfrm" id="acco2">
                                     <form id="Treading" action="<?=base_url();?>home_data">
                                         <input type="hidden" name="type" value="trading">
-                                        <div class="form-group">
-                                            <input type="text" name="registrationNumber" class="form-control" placeholder="Regd. No."  required>
+                                        <div class="collapse show" id="next1a2" aria-labelledby="next1a2" data-parent="#acco2">
+                                            <div class="form-group">
+                                                <input type="text" name="registrationNumber" class="form-control" placeholder="Regd. No."  required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="make" class="form-control" placeholder="Make" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="model" class="form-control"  placeholder="Modal" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" name="year" class="form-control"  placeholder="Year (Ex. 2015)" required>
+                                            </div>
+                                            <div class="arwdwn" data-toggle="collapse" data-target="#next2">
+                                                <i class="fas fa-chevron-down fa-fw"></i>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="text" name="make" class="form-control" placeholder="Make" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="model" class="form-control"  placeholder="Modal" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" name="year" class="form-control"  placeholder="Year (Ex. 2015)" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="owner" class="form-control"  placeholder="Owner" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="location" class="form-control"  placeholder="Location" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" name="kilometers" class="form-control"  placeholder="Kilometers" required>
-                                        </div> 
-                                        <div class="collapse" id="next2">
+                                        <div class="collapse" id="next2" aria-labelledby="next2" data-parent="#acco2">
+											<div class="arwdwn" data-toggle="collapse" data-target="#next1a2" aria-expanded="false" aria-controls="next1a2">
+                                                <i class="fas fa-chevron-up fa-fw"></i>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="owner" class="form-control"  placeholder="Owner" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="location" class="form-control"  placeholder="Location" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" name="kilometers" class="form-control"  placeholder="Kilometers" required>
+                                            </div>
                                             <div class="form-group">
                                                 <input type="text" id="treading_name" class="form-control" placeholder="Name" name="name">
                                             </div>
@@ -571,10 +713,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <input type="tel" id="treading_mobile" class="form-control" placeholder="Phone no." name="mobile">
                                             </div>
                                         </div>
-                                        <div class="minsmackup">
-                                            <div class="arwdwn" data-toggle="collapse" data-target="#next2">
-                                                <i class="fas fa-chevron-down fa-fw"></i>
-                                            </div>
+                                        <div class="">
+                                            
                                             <em class="d-block text-center">Get Pre evaluation done at your door step</em>
                                         </div>
                                         <button class="btn1" type="submit">Kick Start your Drive</button>
@@ -777,111 +917,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </section>
 
-<div class="modal fade bd-example-modal-lg" id="preferpopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <svg height="20" width="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve">
-                <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 
-                185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 "/>
-            </svg>
-        </button>
-        <section class="tabslidersec py-5">
-    <div class="container">
-      <div class="px-4 pt-4 bg-white tabsliderbox">
-
-
-        <div class="slidertab-for my-4">
-          <div class="">
-
-
-            <div class="tabdtlsboxslider">
-              <div class="tabdtlsbox">
-                <div class="tabdtlsvoxImg mb-3">
-                  <span><img src="<?=base_url()?>assets/images/preowned.png" class="w-100" alt=""></span>
-                </div>
-                <h3>Preowned</h3>
-                <p>Cars2day proudly holds a myriad of pre-owned cars form a multitude of experienced, customer friendly independent dealers. When compared to buying a new car, pre-loved cars thoroughly benefits the terms of cost & immense gain on depreciation</p>
-              </div>
-            </div>
-            
-
-            <div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
-
-
-
-          </div>
-          <div class="">
-
-            <div class="tabdtlsboxslider">
-              <div class="tabdtlsbox">
-                <div class="tabdtlsvoxImg mb-3">
-                  <span><img src="<?=base_url()?>assets/images/Refurbished.png" class="w-100" alt=""></span>
-                </div>
-                <h3>Refurbished</h3>
-                <p>Refurbished cars are entirely tested for quality & function of system and also, we replace / repair the necessary parts whenever required. The process of refurbishment proffers buyers the freedom from any expenditure right after their purchase. At Cars2day, Refurbishment is defined by sheer perfection by our experts.</p>
-              </div>
-            </div>
-              <div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
-          </div>
-          <div class="">
-
-            <div class="tabdtlsboxslider">
-              <div class="tabdtlsbox">
-                <div class="tabdtlsvoxImg mb-3">
-                  <span><img src="<?=base_url()?>assets/images/Ceritifed.png" class="w-100" alt=""></span>
-                </div>
-                <h3>Certified</h3>
-               <p>Every car @ Cars2day never misses to undergo a rigorous 210 point inspection by our technical experts. It covers the Mechanical Systems, Body, Chasis in depth for the Mal function, Misalignment and Ensure that its roadworthiness. After Inspection, a Certificate will be issued with the Five Star Rating Scale, based upon the New Car Standards.</p>
-              </div>
-            </div>
-                <div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
-          </div>
-          <div class="">
-            
-            <div class="tabdtlsboxslider">
-            
-
-              <div class="tabdtlsbox">
-                <div class="tabdtlsvoxImg mb-3">
-                  <span><img src="<?=base_url()?>assets/images/Warranty2.png" class="w-100" alt=""></span>
-                </div>
-                <h3>Warranty/Free Service</h3>
-               <p>Every certified car of Cars2day carries a 25000kms or 1 year comprehensive warranty that covers the major element of engine & gear box. At Cars2day Authorised Network Garages, we proffer two Labour Free services to all our Certified cars in every Six Months or 10000 KMS interval.</p>
-              </div>
-
-            </div>
-
-<div class="text-center mb-3"> <a class="btn1 shadow px-lg-5 shadow" href="<?=base_url()?>list">Shop all cars</a></div>
-          </div>
-        </div>
-
-
-        <div class="slidertab-nav mx-lg-4">
-          <div>
-            <a class="crviewbtn active" id="pills-Preowned-tab" data-toggle="pill" href="#pills-Preowned" role="tab"
-              aria-controls="pills-Preowned" aria-selected="true">Preowned</a>
-          </div>
-          <div>
-            <a class="crviewbtn" id="pills-Refurbished-tab" data-toggle="pill" href="#pills-Refurbished" role="tab"
-              aria-controls="pills-Refurbished" aria-selected="false"> Refurbished</a>
-          </div>
-          <div>
-            <a class="crviewbtn" id="pills-Certified-tab" data-toggle="pill" href="#pills-Certified" role="tab"
-              aria-controls="pills-Certified" aria-selected="false"> Certified</a>
-          </div>
-          <div>
-            <a class="crviewbtn" id="pills-Warranty-tab" data-toggle="pill" href="#pills-Warranty" role="tab"
-              aria-controls="pills-Warranty" aria-selected="false"> Warranty/Free Service</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-      </div>
-    </div>
-  </div>
-</div>  
+  

@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="mb-3 text-white">Nothing but Genuine Car Parts for your Car</h1>
+                    <h1 class="mb-3 text-white">Nothing but <br>Genuine Car Parts <br>for your Car</h1>
                     <a href="#" class="btn1">Know more</a>
                 </div>
             </div>
@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="areyoucon">
                             <h5>Discounts</h5>
-                            <p>Avail 5 to 30% discount for all parts ordered in Autoteilee Market Place</p>
+                            <p>Avail 5 to 30% discount for all parts ordered in <br>Autoteilee Market Place</p>
                         </div>
                     </div>
                     <div class="d-flex w-100 my-4">
@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="areyoucon">
                             <h5>One-stop shop</h5>
-                            <p>Buy super quality car parts, tyres, batteries & accessories @ Autoteilee – one-stop shop e-commerce platform</p>
+                            <p>Buy super quality car parts, tyres, batteries & accessories <br>@ Autoteilee – one-stop shop e-commerce platform</p>
                         </div>
                     </div>
                     <div class="d-flex w-100 my-4">
@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="areyoucon">
                             <h5>Super-fast delivery</h5>
-                            <p>Get instant delivery of car parts & accessories within 48 to 72hrs on receipt of order</p>
+                            <p>Get instant delivery of car parts & accessories within <br>48 to 72hrs on receipt of order</p>
                         </div>
                     </div>
                 </div>
@@ -70,31 +70,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section class="py-5 text-center">
         <div class="container">
             <h3 class="mb-5 text-center">Brands we trust</h3>
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand1-A.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand2-B.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand3-C.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand4-D.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand5-E.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand6-F.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand7-G.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <img src="<?=base_url()?>assets/images/brand8-H.png" alt="" class="img-fluid">
-                </div>
+            <div class="slide4 autoicoslide">
+				<div class="autoicowrp">
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand1-A.png" alt="" width="200" class="mx-auto">
+					</div>
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand2-B.png" alt="" width="200" class="mx-auto">
+					</div>
+				</div>
+				<div class="autoicowrp">
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand3-C.png" alt="" width="200" class="mx-auto">
+					</div>
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand4-D.png" alt="" width="200" class="mx-auto">
+					</div>
+				</div>
+				<div class="autoicowrp">
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand5-E.png" alt="" width="200" class="mx-auto">
+					</div>
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand6-F.png" alt="" width="200" class="mx-auto">
+					</div>
+				</div>
+				<div class="autoicowrp">
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand7-G.png" alt="" width="200" class="mx-auto">
+					</div>
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand8-H.png" alt="" width="200" class="mx-auto">
+					</div>
+				</div>
+				<div class="autoicowrp">
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand3-C.png" alt="" width="200" class="mx-auto">
+					</div>
+					<div class="text-center py-3">
+						<img src="<?=base_url()?>assets/images/brand4-D.png" alt="" width="200" class="mx-auto">
+					</div>
+				</div>
+                
+                
+                
+                
             </div>
         </div>
     </section>

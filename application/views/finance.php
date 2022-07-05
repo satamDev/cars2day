@@ -43,9 +43,9 @@ to avail finance for your car</h2>
                         <img class="w-100" src="<?=base_url()?>assets/images/not-just.jpg" alt="">
                     </div>
                     <div class="col-md-7 mb-4 px-lg-5">
-                        <h4 class="mb-2">Not just one, we have a myriad of finance options for you!</h4>
-                        <p>Cars2day presents a plethora of choices that includes banks & NBFC institutions that proffers best rates that comes absolutely pocket friendly.</p>
-                        <a href="#" class="btn1">Know more</a>
+                        <h4 class="mb-2">Not just one, we have a myriad <br>of finance options for you!</h4>
+                        <p>Cars2day presents a plethora of choices that includes <br>banks & NBFC institutions that proffers best rates that <br>comes absolutely pocket friendly.</p>
+                        <a href="<?=base_url()?>contact" class="btn1">Know more</a>
                     </div>
                 </div>
                 <div class="row align-items-center financezigzag flex-row-reverse">
@@ -54,7 +54,7 @@ to avail finance for your car</h2>
                     </div>
                     <div class="col-md-7 mb-4 px-lg-5">
                         <h4 class="mb-2">Digital Finance Platform</h4>
-                        <p>We are in line with the digital era by offering you  digital finance process.<br>Cars2day digital financing encompasses end to end secured process in a digital environment</p>
+                        <p>We are in line with the digital era by offering you <br>digital finance process.<br>Cars2day digital financing encompasses end to end <br>secured process in a digital environment</p>
                     </div>
                     
                 </div>
@@ -172,8 +172,8 @@ to avail finance for your car</h2>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="knowwhatscon">
-                                                <h4 class="mb-3">Your Down payment can make a difference</h4>
-                                                <p>Pay a maximum down payment so that it lowers you monthly payment</p>
+                                                <h4 class="mb-3">Your Down payment <br>can make a difference</h4>
+                                                <p>Pay a maximum down payment <br>so that it lowers you monthly <br>payment</p>
                                             </div>
                                         </div>
                                     </div>
@@ -191,8 +191,8 @@ to avail finance for your car</h2>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="knowwhatscon">
-                                                <h4 class="mb-3">Plan your budget before you get pre-approved</h4>
-                                                <p>Use the budget calculator to analyse how your down payment may affect your monthly payment</p>
+                                                <h4 class="mb-3">Plan your budget before <br>you get pre-approved</h4>
+                                                <p>Use the budget calculator to <br>analyse how your down payment <br>may affect your monthly payment</p>
                                             </div>
                                         </div>
                                     </div>
@@ -474,7 +474,7 @@ to avail finance for your car</h2>
                     <div class="col-md-7">
                         <h3 class="mb-3">How financing works at Cars2day</h3>
                         <p>Get pre-approved to get an idea of what you can spend. If you find other financing after you buy, use our 3‑day payoff program.</p>
-                        <a href="#" class="btn1">Know more</a>
+                        <a href="<?=base_url()?>contact" class="btn1">Know more</a>
                     </div>
                 </div>
             </div>
